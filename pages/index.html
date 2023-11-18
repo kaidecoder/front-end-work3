@@ -1,28 +1,183 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" defer></script>
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
-    <!-- <div class="page-header">
-      <h1>Example Page Header</h1>
-   </div>
-   <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">Some quick example text to build on
-  the card title and make up the bulk of the card's content.</p>
-       <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container-fluid">
+      <header class="header">
+        <img
+          class="img"
+          src="../images/Sharpes Riddim.png"
+          alt="logo of a breadfruit tree"
+        />
+        <div class="d-flex align-items-center">
+          <form class="d-flex w-100" role="search">
+            <input
+              type="search"
+              class="form-control p-4"
+              placeholder="Search..."
+              aria-label="Search"
+              style="width: 800px; padding: 20px"
+            />
+            <button
+              class="search-btn px-5 py-3 btn btn-primary fs-3 position-relative end-0"
+            >
+              SEARCH
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <!-- close the header container div-->
+      <div
+        class="landing-page d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
+      >
+        <div class="row">
+          <div class="menu w-25 bg-secondary fs-1 text-center">
+            <ul class="d-flex flex-column m-5">
+              <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
+              <li><a href="./mental-health.html">Mental Health</a></li>
+              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
+              <li><a href="./exercises.html">Exercises</a></li>
+              <li><a href="./natural-cures.html">Natural Cures</a></li>
+              <li><a href="./stress.html">Stress</a></li>
+            </ul>
+          </div>
+          <!-- end menu -->
+          <div
+            class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
+          >
+            <!-- picture gallery start -->
+
+            <div class="page-header">
+              <h1>Boston in Pictures</h1>
+            </div>
+            <!-- Gallery -->
+            <div class="row">
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <a
+                  href="https://www.trolleytours.com/boston/spring-things-to-do"
+                  ><img
+                    src="../images/spring-in-boston.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water"
+                /></a>
+
+                <a
+                  href="https://revolutionaryspaces.org/discover/old-state-house/"
+                  ><img
+                    src="../images/snow-in-boston.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Wintry Mountain Landscape"
+                /></a>
+
+                <a
+                  href="https://www.nps.gov/places/boston-harbor.htm#:~:text=Boston%20and%20its%20harbor%20served,era%20of%20the%20American%20Revolution."
+                  ><img
+                    src="../images/boston-harbor.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water"
+                /></a>
+
+                <a href="https://www.nps.gov/places/boston-common-ma.htm"
+                  ><img
+                    src="../images/boston-common.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Wintry Mountain Landscape"
+                /></a>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <a href="https://en.wikipedia.org/wiki/Climate_of_Massachusetts"
+                  ><img
+                    src="../images/rain-in-boston.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Mountains in the Clouds"
+                /></a>
+
+                <a
+                  href="https://www.mlb.com/redsox/ballpark/museum/timeline/1912-1919"
+                  ><img
+                    src="../images/fenway-park.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water"
+                /></a>
+
+                <a href="https://roxburyculturaldistrict.com/maps"
+                  ><img
+                    src="../images/roxbury-boston.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Mountains in the Clouds"
+                /></a>
+
+                <a href="https://www.nps.gov/places/beacon-hill.htm"
+                  ><img
+                    src="../images/beacon-hill.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Boat on Calm Water"
+                /></a>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0">
+                <a
+                  href="https://faneuilhallmarketplace.com/about/history-of-faneuil-hall"
+                  ><img
+                    src="../images/faneuil-hall.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Waves at Sea"
+                /></a>
+
+                <a
+                  href="https://www.boston-discovery-guide.com/boston-fall-foliage.html"
+                  ><img
+                    src="../images/fall-in-boston.jpeg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Yosemite National Park"
+                /></a>
+
+                <a href="https://www.bostonteapartyship.com/boston-history"
+                  ><img
+                    src="../images/downtown-boston.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Waves at Sea"
+                /></a>
+
+                <a
+                  href="https://www.nps.gov/nr/travel/maritime/lon.htm#:~:text=Long%20Wharf%20was%20the%20nucleus,the%20use%20of%20small%20boats."
+                  ><img
+                    src="../images/boston-wharf.jpg"
+                    class="w-100 shadow-1-strong rounded mb-4"
+                    alt="Yosemite National Park"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- end row -->
+        </div>
+
+        <!-- Gallery -->
+      </div>
+      <!-- end landing page -->
     </div>
- </div> -->
- 
-    
+    <!-- end container -->
   </body>
 </html>
