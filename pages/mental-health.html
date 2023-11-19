@@ -18,156 +18,231 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       defer
     ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <style>
+      form {
+        position: relative;
+      }
+      .search-btn {
+        background-color: #ff5349;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        font-weight: bold;
+        letter-spacing: 3px;
+        position: absolute;
+        left: -60px;
+      }
+      .search-btn:hover {
+        background-color: #fff;
+        color: #ff5349;
+        border: 3px solid #ff5349;
+      }
+      .right-side {
+        background-color: #82bbff;
+      }
+      .menu {
+        background-color: #ff5349;
+      }
+      h1 {
+        color: #0e083f;
+      }
+    </style>
   </head>
   <body>
-    <div class="page-header">
-      <h1>Feeling Stressed?</h1>
-    </div>
-    <table class="table fs-3">
-      <thead>
-        <tr>
-          <th scope="col">Types of Mental Illness</th>
-          <th scope="col">Symptoms</th>
-          <th scope="col">Causes</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-        <tr>
-          <th>Mood disorders(like bipolar or major depression)</th>
-          <td>unusual or illogical thoughts</td>
-          <td>
-            Genetic factors — having a close family member with a mental illness
-            can increase the chance that you might get a mental illness.
-            However, just because one family member has a mental illness doesn't
-            mean that others will.
-          </td>
-        </tr>
-        <tr>
-          <th>Anxiety disorders</th>
-          <td>unreasonable anger or irritability</td>
-          <td>
-            Drug and alcohol abuse — illicit drug use can trigger a manic
-            episode (bipolar disorder) or an episode of psychosis. Drugs such as
-            cocaine, marijuana and amphetamines can cause paranoia.
-          </td>
-        </tr>
-        <tr>
-          <th>Personality disorders</th>
-          <td>
-            poor concentration and memory, not being able to follow a
-            conversation
-          </td>
-          <td>
-            Other biological factors — some medical conditions or hormonal
-            changes can cause mental health problems.
-          </td>
-        </tr>
-        <tr>
-          <th>Psychotic disorders(such as Schizophrenia)</th>
-          <td>hearing voices that no one else can hear</td>
-          <td>
-            Early life environment — negative childhood experiences can increase
-            the risk of some mental illnesses. Examples of negative childhood
-            experiences are abuse or neglect.
-          </td>
-        </tr>
-        <tr>
-          <th>Eating disorders</th>
-          <td>increased or decreased sleep</td>
-          <td>
-            Trauma and stress — in adulthood, traumatic life events or ongoing
-            stress can increase the risk of mental illness. Issues such as
-            social isolation, domestic violence, relationship breakdown,
-            financial or work problems can impact on mental health. Traumatic
-            experiences such as living in a war zone can increase the risk of
-            post-traumatic stress disorder (PTSD).
-          </td>
-        </tr>
-        <tr>
-          <th>
-            Trauma-related disorders(such as Post Traumatic Stress Disorder)
-          </th>
-          <td>
-            increased or low appetite, or preoccupation with control over food,
-            calories or excessive exercise
-          </td>
-          <td>
-            Personality factors — some traits such as perfectionism or low
-            self-esteem can increase the risk of depression or anxiety.
-          </td>
-        </tr>
-        <tr>
-          <th>Substance Abuse disorders</th>
-          <td>lack of motivation</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td colspan="2">withdrawing from people</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td colspan="2">drug use</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row"></th>
-          <td colspan="2">
-            feelings that life is not worth living or suicidal thoughts
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>feelings that life is not worth living or suicidal thoughts</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>becoming obsessed with a topic, like death or religion</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>becoming obsessed with a topic, like death or religion</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>not looking after personal hygiene or other responsibilities</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container-fluid">
+      <header class="header">
+        <img
+          class="img"
+          src="../images/Sharpes logo.png"
+          alt="logo of a breadfruit tree"
+        />
+        <div class="d-flex align-items-center">
+          <form class="d-flex w-100" role="search">
+            <input
+              type="search"
+              class="form-control p-4"
+              placeholder="Search..."
+              aria-label="Search"
+              style="width: 800px; padding: 20px"
+            />
+            <button class="search-btn px-5 py-3 fs-3 position-relative end-0">
+              SEARCH
+            </button>
+          </form>
+        </div>
+      </header>
 
-    <!-- dropdown menu -->
-    <!-- Example split danger button -->
-    <div class="btn-group">
-      <button type="button" class="btn btn-danger">Action</button>
-      <button
-        type="button"
-        class="btn btn-danger dropdown-toggle dropdown-toggle-split"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
+      <div
+        class="landing-page1 d-flex justify-content-between flex-column h-50 w-auto fs-1 bg-danger"
       >
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider" /></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
+        <div class="row">
+          <div class="menu w-25 fs-1 text-center">
+            <ul class="d-flex flex-column m-5">
+              <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
+              <li><a href="./mental-health.html">Mental Health</a></li>
+              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
+              <li><a href="./exercises.html">Exercises</a></li>
+              <li><a href="./natural-cures.html">Natural Cures</a></li>
+              <li><a href="./stress.html">Stress</a></li>
+            </ul>
+          </div>
+          <!-- end menu -->
+
+          <div
+            class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
+          >
+            <!-- picture gallery start -->
+
+            <div class="page-header">
+              <h1>Boston in Health</h1>
+            </div>
+            <!-- Gallery -->
+            <div class="row">
+              <table class="table fs-3">
+                <thead>
+                  <tr>
+                    <th scope="col">Types of Mental Illness</th>
+                    <th scope="col">Symptoms</th>
+                    <th scope="col">Causes</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <th>Mood disorders(like bipolar or major depression)</th>
+                    <td>unusual or illogical thoughts</td>
+                    <td>
+                      Genetic factors — having a close family member with a
+                      mental illness can increase the chance that you might get
+                      a mental illness. However, just because one family member
+                      has a mental illness doesn't mean that others will.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Anxiety disorders</th>
+                    <td>unreasonable anger or irritability</td>
+                    <td>
+                      Drug and alcohol abuse — illicit drug use can trigger a
+                      manic episode (bipolar disorder) or an episode of
+                      psychosis. Drugs such as cocaine, marijuana and
+                      amphetamines can cause paranoia.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Personality disorders</th>
+                    <td>
+                      poor concentration and memory, not being able to follow a
+                      conversation
+                    </td>
+                    <td>
+                      Other biological factors — some medical conditions or
+                      hormonal changes can cause mental health problems.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Psychotic disorders(such as Schizophrenia)</th>
+                    <td>hearing voices that no one else can hear</td>
+                    <td>
+                      Early life environment — negative childhood experiences
+                      can increase the risk of some mental illnesses. Examples
+                      of negative childhood experiences are abuse or neglect.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Eating disorders</th>
+                    <td>increased or decreased sleep</td>
+                    <td>
+                      Trauma and stress — in adulthood, traumatic life events or
+                      ongoing stress can increase the risk of mental illness.
+                      Issues such as social isolation, domestic violence,
+                      relationship breakdown, financial or work problems can
+                      impact on mental health. Traumatic experiences such as
+                      living in a war zone can increase the risk of
+                      post-traumatic stress disorder (PTSD).
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>
+                      Trauma-related disorders(such as Post Traumatic Stress
+                      Disorder)
+                    </th>
+                    <td>
+                      increased or low appetite, or preoccupation with control
+                      over food, calories or excessive exercise
+                    </td>
+                    <td>
+                      Personality factors — some traits such as perfectionism or
+                      low self-esteem can increase the risk of depression or
+                      anxiety.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Substance Abuse disorders</th>
+                    <td>lack of motivation</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td colspan="2">withdrawing from people</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td colspan="2">drug use</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td colspan="2">
+                      feelings that life is not worth living or suicidal
+                      thoughts
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
+                      feelings that life is not worth living or suicidal
+                      thoughts
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
+                      becoming obsessed with a topic, like death or religion
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
+                      becoming obsessed with a topic, like death or religion
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
+                      not looking after personal hygiene or other
+                      responsibilities
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- close the container -->
     </div>
   </body>
 </html>

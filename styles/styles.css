@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .container-fluid {
-  background-color: #000000;
+  background-color: #02155a;
 }
 .header {
   width: 100%;
@@ -14,7 +14,7 @@
 
 a {
   text-decoration: none;
-  color: #feff00;
+  color: white;
 }
 
 .img {
@@ -55,11 +55,28 @@ li {
   margin-bottom: 150px;
   position: relative;
 }
-.search-btn {
-  border-radius: 0 20px 20px 0;
-}
 
 input::placeholder {
   font-size: 30px;
   border-radius: 20px 0 0 20px;
+}
+/* boston cuisine page */
+.card {
+  /* background-color: green; */
+  color: black;
+  padding: 30px;
+}
+
+.landing-page {
+  padding: 20px 0;
+}
+
+.cuisine-btn {
+  margin: 0 auto;
+  background-color: #ff5349;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.cuisine-btn a {
+  color: white;
 }

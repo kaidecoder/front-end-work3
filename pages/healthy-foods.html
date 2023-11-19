@@ -18,21 +18,157 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       defer
     ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <style>
+      form {
+        position: relative;
+      }
+      .search-btn {
+        background-color: #ff5349;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        font-weight: bold;
+        letter-spacing: 3px;
+        position: absolute;
+        left: -60px;
+      }
+      .search-btn:hover {
+        background-color: #fff;
+        color: #ff5349;
+        border: 3px solid #ff5349;
+      }
+      .right-side {
+        background-color: #82bbff;
+      }
+      .menu {
+        background-color: #ff5349;
+      }
+      h1 {
+        color: #0e083f;
+      }
+    </style>
   </head>
   <body>
-    <div class="page-header">
-      <h1>Example Page Header</h1>
-    </div>
-    <div class="card" style="width: 18rem">
-      <img class="card-img-top" src="..." alt="Card image cap" />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container-fluid">
+      <header class="header">
+        <img
+          class="img"
+          src="../images/Sharpes logo.png"
+          alt="logo of a breadfruit tree"
+        />
+        <div class="d-flex align-items-center">
+          <form class="d-flex w-100" role="search">
+            <input
+              type="search"
+              class="form-control p-4"
+              placeholder="Search..."
+              aria-label="Search"
+              style="width: 800px; padding: 20px"
+            />
+            <button class="search-btn px-5 py-3 fs-3 position-relative">
+              SEARCH
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <!-- close the header -->
+      <div
+        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
+      >
+        <div class="row">
+          <div class="menu w-25 fs-1 text-center">
+            <ul class="d-flex flex-column m-5">
+              <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
+              <li><a href="./mental-health.html">Mental Health</a></li>
+              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
+              <li><a href="./exercises.html">Exercises</a></li>
+              <li><a href="./natural-cures.html">Natural Cures</a></li>
+              <li><a href="./stress.html">Stress</a></li>
+            </ul>
+          </div>
+          <!-- end menu -->
+          <div
+            class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
+          >
+            <!-- picture gallery start -->
+
+            <div class="page-header">
+              <h1>Boston in Health</h1>
+            </div>
+            <!-- Gallery -->
+            <div class="row">
+              <div
+                class="d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center"
+              >
+                <div
+                  class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px"
+                  data-bs-theme="light"
+                >
+                  <form class="p-2 mb-2 bg-body-tertiary border-bottom">
+                    <input
+                      type="search"
+                      class="form-control"
+                      autocomplete="false"
+                      placeholder="Type to filter..."
+                    />
+                  </form>
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 py-2"
+                        href="https://visithampshirecounty.com/eat/farms"
+                      >
+                        <span
+                          class="d-inline-block bg-success rounded-circle p-1"
+                        ></span>
+                        Foods Grown in Western Massachusetts
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 py-2"
+                        href="https://www.bmc.org/nourishing-our-community/rooftop-farm"
+                      >
+                        <span
+                          class="d-inline-block bg-primary rounded-circle p-1"
+                        ></span>
+                        Rooftop Farms in Boston
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 py-2"
+                        href="https://www.tpl.org/our-work/boston-urban-agriculture"
+                      >
+                        <span
+                          class="d-inline-block bg-danger rounded-circle p-1"
+                        ></span>
+                        Urban Farms in Boston
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 py-2"
+                        href="https://www.tpl.org/our-work/boston-urban-agriculture"
+                      >
+                        <span
+                          class="d-inline-block bg-info rounded-circle p-1"
+                        ></span>
+                        Farming atop Fenway Park
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+          </div>
+        </div>
+        <!-- Gallery -->
       </div>
+      <!-- end landing page -->
     </div>
+    <!-- end container -->
   </body>
 </html>

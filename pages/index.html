@@ -19,13 +19,41 @@
       defer
     ></script>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <style>
+      form {
+        position: relative;
+      }
+      .search-btn {
+        background-color: #ff5349;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        font-weight: bold;
+        letter-spacing: 3px;
+        position: absolute;
+        left: -60px;
+      }
+      .search-btn:hover {
+        background-color: #fff;
+        color: #ff5349;
+        border: 3px solid #ff5349;
+      }
+      .right-side {
+        background-color: #82bbff;
+      }
+      .menu {
+        background-color: #ff5349;
+      }
+      h1 {
+        color: #0e083f;
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
       <header class="header">
         <img
           class="img"
-          src="../images/Sharpes Riddim.png"
+          src="../images/Sharpes logo.png"
           alt="logo of a breadfruit tree"
         />
         <div class="d-flex align-items-center">
@@ -37,21 +65,19 @@
               aria-label="Search"
               style="width: 800px; padding: 20px"
             />
-            <button
-              class="search-btn px-5 py-3 btn btn-primary fs-3 position-relative end-0"
-            >
+            <button class="search-btn px-5 py-3 fs-3 position-relative">
               SEARCH
             </button>
           </form>
         </div>
       </header>
 
-      <!-- close the header container div-->
+      <!-- close the header -->
       <div
-        class="landing-page d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
+        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
       >
         <div class="row">
-          <div class="menu w-25 bg-secondary fs-1 text-center">
+          <div class="menu w-25 fs-1 text-center">
             <ul class="d-flex flex-column m-5">
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
               <li><a href="./mental-health.html">Mental Health</a></li>
