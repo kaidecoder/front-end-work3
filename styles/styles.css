@@ -3,13 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: black;
+}
 .container-fluid {
   background-color: #02155a;
 }
 .header {
   width: 100%;
+  height: 250px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 a {
@@ -20,7 +25,6 @@ a {
 .img {
   object-fit: contain;
   height: 300px;
-  vertical-align: middle;
 }
 
 .menu-items {
@@ -29,7 +33,7 @@ a {
   vertical-align: middle;
 }
 
-ul {
+.menu ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,7 +51,7 @@ ul {
   top: 30px;
   left: 10px;
 } */
-li {
+.row > .menu ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -69,6 +73,7 @@ input::placeholder {
 
 .landing-page {
   padding: 20px 0;
+  overflow: scroll;
 }
 
 .cuisine-btn {
@@ -79,4 +84,79 @@ input::placeholder {
 }
 .cuisine-btn a {
   color: white;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* animation starts*/
+.page-header:hover .empty {
+  transform: translateX(3000px);
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  33% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  66% {
+    transform: translateX(100%);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: translateX(100%);
+  }
+}
+.row {
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+}
+.row:nth-child(even) {
+  margin-left: 1px;
+}
+
+.empty {
+  position: relative;
+  height: 50px;
+  width: 30px;
+  background-color: #111;
+  margin: 1px;
+}
+
+.empty::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 0px;
+  height: 0px;
+  border-right: 15px solid red;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+.empty::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid red;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  transition: transform 1s;
 }
