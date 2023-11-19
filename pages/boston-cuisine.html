@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boston Cuisine</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8ec63f7015.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      form {
+        position: relative;
+      }
+      .search-btn {
+        background-color: #ff5349;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        font-weight: bold;
+        letter-spacing: 3px;
+        position: absolute;
+        left: -60px;
+      }
+      .search-btn:hover {
+        background-color: #fff;
+        color: #ff5349;
+        border: 3px solid #ff5349;
+      }
+      .right-side {
+        background-color: #82bbff;
+      }
+      .menu {
+        background-color: #ff5349;
+      }
+      h1 {
+        color: #0e083f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="header">
+        <img
+          class="img"
+          src="../images/Sharpes logo.png"
+          alt="logo of a breadfruit tree"
+        />
+        <div class="d-flex align-items-center">
+          <form class="d-flex w-100" role="search">
+            <input
+              type="search"
+              class="form-control p-4"
+              placeholder="Search..."
+              aria-label="Search"
+              style="width: 800px; padding: 20px"
+            />
+            <button class="search-btn px-5 py-3 fs-3 position-relative">
+              SEARCH
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <!-- <div
+        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
+      > -->
+
+      <div
+        class="landing-page d-flex justify-content-around align-items-center flex-wrap gap-5 fs-3"
+      >
+        <div class="row">
+          <div class="menu w-25 fs-1 text-center">
+            <ul class="d-flex flex-column m-5">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
+              <li><a href="./mental-health.html">Mental Health</a></li>
+              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
+              <li><a href="./exercises.html">Exercises</a></li>
+              <li><a href="./natural-cures.html">Natural Cures</a></li>
+              <li><a href="./stress.html">Stress</a></li>
+            </ul>
+          </div>
+          <!-- end menu -->
+
+          <div
+            class="right-side d-flex justify-content-around align-content-center flex-wrap w-75 fs-3 text-center gap-2 pt-5"
+          >
+            <!-- cuisine gallery start -->
+
+            <div class="page-header">
+              <!-- <h1>Boston in Food</h1> -->
+              <!-- animation start -->
+              <div class="row">
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+                <div class="empty"></div>
+              </div>
+              <!-- animation end -->
+            </div>
+
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">Fried Clams</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <button class="cuisine-btn">
+                  <span
+                    ><a href="https://www.woodmans.com/"
+                      >Woodman's of Essex</a
+                    ></span
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Clam Chowder</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/boston-baked-beans.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Boston Baked Beans</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/lobster-roll.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lobster Roll</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Clambake</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/boston-cream-pie.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Boston Cream Pie</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Lobster Mac & Cheese</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/roast-beef-sandwich.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Roast Beef Sandwich</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/oysters.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Oysters</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fried Clams</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fried Clams</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fried Clams</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+            <div class="card" style="width: 24rem">
+              <img
+                class="card-img-top"
+                src="../images/fried-clams.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Fried Clams</h5>
+                <p class="card-text">
+                  locals and tourists cheerily squeeze their lemons over golden,
+                  crispy fried clam platters all year long.
+                </p>
+                <a href="https://www.woodmans.com/">Woodman's of Essex</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </body>
+</html>
