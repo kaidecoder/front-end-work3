@@ -92,11 +92,25 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
               <li><a href="./mental-health.html">Mental Health</a></li>
-              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
-              <li><a href="./stress.html">Stress</a></li>
+
+              <!-- start interview -->
+              <li>
+                <div class="custom-select">
+                  <select onchange="interview(this.value)">
+                    <option selected disabled>Interview a Bostonian</option>
+                    <option value="./deb.html">Deb</option>
+                    <option value="./about.html">About</option>
+                    <option value="./books.html">Books</option>
+                    <option value="./games.html">Games</option>
+                    <option value="./quiz.html">Quiz</option>
+                  </select>
+                </div>
+              </li>
             </ul>
+            <!-- end interview -->
           </div>
           <!-- end menu -->
+
           <div
             class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
           >
@@ -248,5 +262,10 @@
       <!-- end landing page -->
     </div>
     <!-- end container -->
+    <script>
+      function interview(src) {
+        window.location = src;
+      }
+    </script>
   </body>
 </html>

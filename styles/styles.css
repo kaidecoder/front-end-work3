@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: black;
-}
+
 .container-fluid {
   background-color: #02155a;
 }
@@ -42,15 +40,6 @@ a {
   position: relative;
 }
 
-/* li a:hover::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  color: crimson;
-  position: absolute;
-  top: 30px;
-  left: 10px;
-} */
 .row > .menu ul li {
   display: flex;
   justify-content: space-around;
@@ -68,12 +57,12 @@ input::placeholder {
 .card {
   /* background-color: green; */
   color: black;
-  padding: 30px;
+  padding: 10px;
+  height: 38rem;
 }
 
 .landing-page {
-  padding: 20px 0;
-  overflow: scroll;
+  padding: 10px 0;
 }
 
 .cuisine-btn {
@@ -92,8 +81,7 @@ input::placeholder {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 200px;
-  overflow: hidden;
+  height: 40px;
 }
 
 /* animation starts*/
@@ -159,4 +147,53 @@ input::placeholder {
   border-top: 25px solid transparent;
   border-bottom: 25px solid transparent;
   transition: transform 1s;
+}
+
+/* about page */
+.right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headshot-container {
+  background-image: linear-gradient(135deg, #02155a, #82bbff, #02155a);
+  width: 50vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 7px 10px 79px 5px rgba(0, 0, 0, 0.85);
+  -webkit-box-shadow: 7px 10px 79px 5px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 7px 10px 79px 5px rgba(0, 0, 0, 0.85);
+}
+
+.headshot {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 20px;
+  object-fit: contain;
+}
+
+.name {
+  font-family: "Kaushan Script", cursive;
+  letter-spacing: 3px;
+  line-height: 78px;
+  color: #fff;
+  background-color: rgb(49, 42, 34);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.title {
+  color: rgb(233, 171, 233);
+  margin: 20px;
+  font-family: "Kaushan Script", cursive;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 3px 3px #df05b7;
+  line-height: 24px;
 }

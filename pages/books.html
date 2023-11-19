@@ -1,30 +1,797 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books I like</title>
-    <link rel="stylesheet" href="./css/script.css">
-</head>
-<body>
-    <h1 class="title">Books I read lately</h1>
-    <a href="index.html">Go to home page</a>
-    <div class="books">
-        
-        <div class="book book1">
-            <h2 class="book-title">To Kill a Mockingbird</h2>
-            <h3 class="cost">$10.99</h3>
-            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt suscipit beatae ullam quae unde sit voluptas repellat mollitia ab voluptatibus?</p>
-        </div>
-        <div class="book book2">book</div>
-        <div class="book book3">book</div>
-        <div class="book book4">book</div>
-        <div class="book book5">book</div>
-        <div class="book book6">book</div>
-        <div class="book book7">book</div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books to enjoy</title>
+    <link rel="stylesheet" href="../styles/books.css" />
+    <script
+      src="https://kit.fontawesome.com/8ec63f7015.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/amazon-ember");
 
-   
-</body>
+      :root {
+        --hamburger-menu-bar: #232f3e;
+        --amazon-logo-bar: #131921;
+        --best-sellers-audible-books-originals: #0f1111;
+        --search-button-amazon-logo-bar: #febd68;
+        --orange-on-amazon-logo: #ff9900;
+        --orange-in-amazon-cart: #f08806;
+        --gray-on-dropdown-box-on-amazon-logo-bar: #e6e6e6;
+        --gray-in-delivering-to-atlanta: #cccccc;
+        --green-for-the-book-titles: #017184;
+        --orange-for-the-stars-inside: #ffa41c;
+        --orange-for-the-star-border: #e28433;
+        --color-on-the-number-of-each-book: #c45500;
+        --amazon-best-sellers-banner: #068599;
+        --amazon-best-sellers-banner2: ##088296;
+      }
+      /* 
+font-family: 'Amazon Ember', sans-serif;
+font-family: 'Amazon Ember Cd RC', sans-serif;
+font-family: 'Amazon Ember Display', sans-serif;
+font-family: 'Amazon Ember Duospace', sans-serif;
+font-family: 'Amazon Ember Mono', sans-serif;
+font-family: 'Amazon Ember V2', sans-serif; */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Amazon Ember V2", sans-serif;
+      }
+
+      /* start amazon logo bar */
+      .amazonLogoBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 50px;
+        background-color: var(--amazon-logo-bar);
+        color: #fff;
+      }
+
+      .amazonLogoBar a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .amazonLogo img {
+        width: 80px;
+        padding-top: 5px;
+        margin-left: -30px;
+      }
+      .amazonLogo img:hover {
+        border: 1px solid white;
+        padding: 15px 20px;
+      }
+
+      .deliveryInfo {
+        display: flex;
+      }
+      .deliveryInfo:hover {
+        border: 1px solid white;
+        padding: 8px 20px;
+      }
+      .fa-location-dot {
+        margin-right: 3px;
+      }
+      .address p {
+        font-size: 11px;
+        margin-bottom: -5px;
+        color: var(--gray-in-delivering-to-atlanta);
+      }
+      .address h6 {
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+      }
+
+      #audible {
+        background-color: var(--gray-on-dropdown-box-on-amazon-logo-bar);
+        font-size: 12px;
+        height: 35px;
+        padding: 6.5px;
+        border: none;
+        outline: none;
+        border-radius: 5px 0 0 5px;
+      }
+      #audible span {
+        outline: none;
+      }
+
+      .flex-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .searchAmazon {
+        font-size: 12px;
+        padding: 5px;
+        width: 34.55vw;
+        height: 35px;
+        border: none;
+      }
+
+      .searchAmazon::placeholder {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .searchInput {
+        width: 40px;
+        cursor: pointer;
+      }
+
+      .magnifyInput {
+        width: 100%;
+        height: 35px;
+        background-color: var(--search-button-amazon-logo-bar);
+        padding: 3px;
+        margin-left: -5px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+      }
+      .searchLogo {
+        position: relative;
+      }
+      .searchLogo .fa-solid {
+        position: absolute;
+        top: -27px;
+        right: 13px;
+        color: #333;
+        outline: none;
+      }
+
+      .usflag {
+        width: 20px;
+        height: 14px;
+        margin-right: -2px;
+      }
+
+      .usPic {
+        display: flex;
+        height: 20px;
+      }
+
+      .usPic:hover {
+        border: 1px solid white;
+      }
+
+      .dropdown {
+        display: relative;
+      }
+
+      #en {
+        background-color: var(--amazon-logo-bar);
+        font-size: 14px;
+        font-weight: bold;
+        height: 30px;
+        width: 37px;
+        color: #fff;
+        border: none;
+        position: absolute;
+        top: 1px;
+        margin-left: 2px;
+      }
+
+      #signin {
+        background-color: var(--amazon-logo-bar);
+        font-size: 14px;
+        font-weight: bold;
+        height: 100%;
+        padding: 6.5px;
+        color: #fff;
+        border: none;
+      }
+
+      .signin {
+        position: relative;
+        margin-top: 10px;
+      }
+
+      .signin p {
+        position: absolute;
+        font-size: 10px;
+        top: -6px;
+        left: 10px;
+        color: white;
+      }
+
+      .returns p {
+        font-size: 12px;
+      }
+      .returns h4 {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .cart {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .cart > span {
+        color: var(--orange-in-amazon-cart);
+        position: absolute;
+        bottom: 7px;
+      }
+      /* end amazon logo bar */
+
+      /* start amazon menu bar */
+      .amazonMenuBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        background-color: var(--hamburger-menu-bar);
+        color: white;
+        height: 30px;
+        padding: 20px;
+      }
+
+      .menuIcon {
+        width: 50px;
+        font-weight: bold;
+      }
+      p span {
+        font-size: 14px;
+      }
+      .fa-bars {
+        margin-right: 5px;
+        font-size: 20px;
+      }
+
+      .menuItems {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 99vw;
+        font-size: 12px;
+        margin-right: 10px;
+      }
+
+      .menuItems p:last-child {
+        font-weight: bold;
+        margin-left: 90px;
+      }
+      /* end amazon menu bar  */
+      /* start audible menu bar  */
+      .audibleBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 45px;
+        padding: 0 20px;
+        overflow: hidden;
+      }
+      .logo {
+        margin-right: 50px;
+        width: 100px;
+      }
+
+      .logoImg {
+        height: 100%;
+        width: 100%;
+      }
+      .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 650px;
+        font-size: 12px;
+      }
+
+      a {
+        color: #000;
+        position: relative;
+        text-decoration: none;
+      }
+
+      .links a:hover::after,
+      .settings a:hover::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: red;
+        display: inline-block;
+        position: absolute;
+        bottom: -5px;
+        left: -1px;
+      }
+
+      .settings {
+        margin-left: auto;
+        font-size: 12px;
+      }
+
+      /* end audible menu bar  */
+      /* start amazon best sellers bar */
+
+      .amazonBestSellersBar {
+        background-image: radial-gradient(
+          #088296,
+          hsla(188, 92%, 31%, 0.8) 5%,
+          #088296
+        );
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .amazonBestSellersBar p {
+        letter-spacing: 0px;
+        font-size: 55px;
+        z-index: 50;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .amazonBestSellersBar p + p {
+        letter-spacing: 1;
+        font-size: 14px;
+        font-weight: normal;
+        margin-top: -10px;
+        padding-bottom: 20px;
+      }
+      /* end amazon best sellers bar */
+
+      /* start features */
+      .booksContainer {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 20px;
+        margin-top: 10px;
+      }
+
+      /* start left side of features */
+      .books a:hover {
+        text-decoration: underline;
+      }
+
+      .left-side {
+        padding: 0 20px;
+        width: 600px;
+        font-size: 12px;
+        line-height: 1.75;
+        margin-left: -30px;
+      }
+      .left-side a:hover {
+        text-decoration: underline;
+      }
+      .left-side h4 {
+        margin-left: 15px;
+      }
+
+      .left-side ul {
+        margin-left: 25px;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      li a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .left-side p {
+        margin-left: 5px;
+      }
+      .left-side p > a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      /* end left side of features */
+
+      /*start right side of features */
+
+      .booksContainer .right-side {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .right-side-container h3 {
+        border-left: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      .card {
+        width: 295px;
+        height: 320px;
+        background-color: #fff;
+        border: 1px solid rgba(204, 204, 204, 0.4);
+        padding: 20px;
+        position: relative;
+        font-size: 12px;
+        overflow: hidden;
+      }
+
+      .card a + h4 {
+        margin-top: 5px;
+      }
+
+      .card .title a,
+      .readers {
+        color: var(--green-for-the-book-titles);
+      }
+
+      .title a {
+        font-weight: normal;
+      }
+
+      .title a:hover {
+        color: #b12605;
+        text-decoration: underline;
+      }
+      .card img {
+        width: 270px;
+        margin-top: 15px;
+        z-index: 50;
+        box-shadow:
+          rgba(0, 0, 0, 0.25) 0px 0px 0px,
+          rgba(0, 0, 0, 0.12) 0px 0px 0px,
+          rgba(0, 0, 0, 0.12) 0px 0px 0px,
+          rgba(0, 0, 0, 0.17) 0px 0px 0px,
+          rgba(0, 0, 0, 0.09) 0px 0px 0px;
+      }
+      .card .cost {
+        color: #b12605;
+      }
+
+      .order {
+        background-color: var(--color-on-the-number-of-each-book);
+        width: 55px;
+        /* height: 25px; */
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .order span {
+        margin-right: 25px;
+      }
+
+      .blank {
+        width: 28px;
+        height: 50px;
+        background-color: #fff;
+        position: absolute;
+        top: 0px;
+        left: 26px;
+        z-index: 10;
+        transform: rotate(29deg) translateX(0px) translateY(-5px);
+      }
+
+      .empty {
+        margin: 20px;
+      }
+
+      .go-home {
+        color: blue;
+      }
+
+      /*end right side of features */
+      /* end books container */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- amazon logo bar begins -->
+      <div class="amazonLogoBar">
+        <a href="#">
+          <div class="amazonLogo">
+            <a
+              href="https://www.amazon.com/Best-Sellers-Audible-Audiobooks/zgbs/audible?ref_=nav_em_aud_zgbs_dct1_0_2_9_4"
+              ><img class="img" src="../images/amazon.jpg" alt="amazon image"
+            /></a>
+          </div>
+        </a>
+        <a href="#">
+          <div class="deliveryInfo">
+            <div class="locationLogo">
+              <i class="fa-solid fa-location-dot" fa-sm></i>
+            </div>
+            <div class="address">
+              <p>Delivering to Atlanta, 30033</p>
+              <h6>Update location</h6>
+            </div>
+          </div>
+        </a>
+        <!-- form starts -->
+        <div class="form">
+          <div class="flex-form-container">
+            <form class="siteSearch">
+              <a href="#">
+                <div class="dropdown">
+                  <select name="audible" id="audible">
+                    <option value="audible" selected>
+                      <span>Audible Books & Originals</span>
+                    </option>
+                  </select>
+                </div>
+              </a>
+            </form>
+            <div>
+              <form>
+                <div class="textInput">
+                  <input
+                    class="searchAmazon"
+                    type="text"
+                    placeholder="Search Amazon"
+                  />
+                </div>
+              </form>
+            </div>
+            <div>
+              <form>
+                <div class="searchInput">
+                  <input class="magnifyInput" type="text" />
+                  <div class="searchLogo">
+                    <i class="fa-solid fa-magnifying-glass fa-md"></i>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- </form> -->
+        </div>
+
+        <a href="#">
+          <div class="usPic">
+            <div>
+              <img
+                class="usflag"
+                src="../images/united-states.png"
+                alt="us flag"
+              />
+            </div>
+            <form>
+              <div class="dropdown">
+                <select name="en" id="en">
+                  <option class="en" value="en" selected>EN</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </a>
+        <a href="#">
+          <form>
+            <div class="dropdown signin">
+              <p>Hello, sign in</p>
+              <select name="signin" id="signin">
+                <option value="audible" selected>Accounts & Lists</option>
+              </select>
+            </div>
+          </form>
+        </a>
+        <!-- form ends -->
+        <div class="returns">
+          <p>Returns</p>
+          <h4>& Orders</h4>
+        </div>
+        <div class="cart">
+          <span>12</span>.
+          <i class="fa-solid fa-cart-shopping fa-sm"></i>
+        </div>
+      </div>
+      <!-- amazon logo bar ends -->
+
+      <!-- amazon menu bar begins -->
+      <div class="amazonMenuBar">
+        <div class="menuIcon">
+          <p><i class="fa-solid fa-bars fa-sm"></i><span>All</span></p>
+        </div>
+        <div class="menuItems">
+          <p>Holiday Deals</p>
+          <p>Medical Care</p>
+          <p>Groceries</p>
+          <p>Best Sellers</p>
+          <p>Amazon Basics</p>
+          <p>Prime</p>
+          <p>Registry</p>
+          <p>New Releases</p>
+          <p>Today's Deals</p>
+          <p>Customer Service</p>
+          <p>Music</p>
+          <p>Books</p>
+          <p>Fashion</p>
+          <p>Amazon Home</p>
+          <p>Get a Jump on Holiday Gifts</p>
+        </div>
+      </div>
+      <!-- amazon menu bar ends  -->
+
+      <!-- audible bar begins -->
+      <div class="audibleBar">
+        <div class="logo">
+          <img class="logoImg" src="../images/audible.jpg" alt="audible logo" />
+        </div>
+        <div class="links">
+          <p><a href="#">Audible Membership</a></p>
+          <a href="#">Now Trending</a>
+          <a href="#">Categories</a>
+          <a href="#">More to Explore</a>
+        </div>
+        <div class="settings"><a href="#">Settings</a></div>
+      </div>
+      <!-- audible bar ends -->
+
+      <!-- amazon books container begins -->
+      <div class="amazonBestSellersBar">
+        <p>Amazon Best Sellers</p>
+        <p>Our most popular products based on sales. Updated frequently.</p>
+      </div>
+      <div class="booksContainer">
+        <div class="left-side">
+          <p>
+            <a href="#"
+              ><i class="fa-solid fa-chevron-left fa-2xs"></i>Any Department</a
+            >
+          </p>
+          <h4>Audible Books & Originals</h4>
+          <div class="books">
+            <ul>
+              <li><a href="#">Arts & Entertainment</a></li>
+              <li><a href="#">Biographies & Memoirs</a></li>
+              <li><a href="#">Business & Careers</a></li>
+              <li><a href="#">Children's Audiobooks</a></li>
+              <li><a href="#">Comedy & Humor</a></li>
+              <li><a href="#">Computers & Technology</a></li>
+              <li><a href="#">Education & Learning</a></li>
+              <li><a href="#">Erotica</a></li>
+              <li><a href="#">Health & Wellness</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Home & Garden</a></li>
+              <li><a href="#">LGBTQ+</a></li>
+              <li><a href="#">Literature & Fiction</a></li>
+              <li><a href="#">Money & Finance</a></li>
+              <li><a href="#">Mystery, Thriller & Suspense</a></li>
+              <li><a href="#">Politics & Social Sciences</a></li>
+              <li>
+                <a href="#">Relationships, Parenting & Personal Development</a>
+              </li>
+              <li><a href="#">Religion & Spirituality</a></li>
+              <li><a href="#">Romance</a></li>
+              <li><a href="#">Science & Engineering</a></li>
+              <li><a href="#">Science Fiction & Fantasy</a></li>
+              <li><a href="#">Sports & Outdoors</a></li>
+              <li><a href="#">Teen & Young Adult</a></li>
+              <li><a href="#">Travel & Tourism</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-side-container">
+          <h3>Best Sellers in Audible Books & Originals</h3>
+          <div class="right-side">
+            <div class="book1 card">
+              <div class="blank"></div>
+              <p class="order"><span>#1</span></p>
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/71KKyNg4PWL._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title"><a href="#">The Woman in Me</a></h4>
+              <p class="author">Britney spears</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">16,08</span>
+              </p>
+              <p class="genre">Audible Audiobooks</p>
+              <p class="cost">$16.40</p>
+            </div>
+            <div class="book2 card">
+              <div class="blank"></div>
+
+              <p class="order"><span>#2</span></p>
+
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/A19tBquzlPL._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title">
+                <a href="#">Iron Flame: Empyrean, Book 2</a>
+              </h4>
+              <p class="author">Rebecca Yarros</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">8,862</span>
+              </p>
+              <p class="genre">Audible Audiobook</p>
+              <p class="cost">$36.74</p>
+            </div>
+            <div class="book3 card">
+              <div class="blank"></div>
+              <p class="order"><span>#3</span></p>
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81Js8wlvnDL._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title">
+                <a href="#">Friends, Lovers, and the Big Terrible Thing</a>
+              </h4>
+              <p class="author">Matthew Perry</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">28,380</span>
+              </p>
+              <p class="genre">Audible Audiobook</p>
+              <p class="cost">$17.71</p>
+            </div>
+            <div class="book4 card">
+              <div class="blank"></div>
+              <p class="order"><span>#4</span></p>
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/A15A7wamBML._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title">
+                <a href="#">Fourth Wing: Empyrean, Book 1</a>
+              </h4>
+              <p class="author">Rebecca Yarros</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">108,761</span>
+              </p>
+              <p class="genre">Audible Audiobook</p>
+              <p class="cost">$29.30</p>
+            </div>
+            <div class="book5 card">
+              <div class="blank"></div>
+              <p class="order"><span>#5</span></p>
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81DaM32MBWL._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title"><a href="#">My Name Is Barbra</a></h4>
+              <p class="author">Barbra Streisand</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">81</span>
+              </p>
+              <p class="genre">Audible Audiobook</p>
+              <p class="cost">$61.25</p>
+            </div>
+            <div class="book6 card">
+              <div class="blank"></div>
+              <p class="order"><span>#6</span></p>
+              <a href="#"
+                ><img
+                  src="https://images-na.ssl-images-amazon.com/images/I/81sLLyxg8xL._AC_UL900_SR900,600_.jpg"
+                  alt=""
+              /></a>
+              <h4 class="title"><a href="#">Resurrection Walk</a></h4>
+              <p class="author">Nichael Connelly</p>
+              <p class="stars">
+                ⭐️⭐️⭐️⭐️⭐️<span class="readers">1,409</span>
+              </p>
+              <p class="genre">Audible Audiobook</p>
+              <p class="cost">$27.94</p>
+            </div>
+          </div>
+        </div>
+        <!-- amazon books container ends -->
+      </div>
+    </div>
+    <a class="go-home" href="deb.html">Go to interview home page</a>
+  </body>
 </html>

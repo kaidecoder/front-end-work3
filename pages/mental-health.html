@@ -50,6 +50,12 @@
       h1 {
         color: #0e083f;
       }
+      .footer-menu {
+        display: flex;
+        width: 900px;
+        justify-content: space-around;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -85,11 +91,21 @@
               <li><a href="./index.html">Home</a></li>
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
               <li><a href="./mental-health.html">Mental Health</a></li>
-              <li><a href="./healthy-foods.html">Healthy Foods</a></li>
-              <li><a href="./exercises.html">Exercises</a></li>
-              <li><a href="./natural-cures.html">Natural Cures</a></li>
-              <li><a href="./stress.html">Stress</a></li>
+              <li>
+                <!-- start interview -->
+                <div class="custom-select">
+                  <select onchange="interview(this.value)">
+                    <option selected disabled>Interview a Bostonian</option>
+                    <option value="./deb.html">Deb</option>
+                    <option value="./about.html">About</option>
+                    <option value="./books.html">Books</option>
+                    <option value="./games.html">Games</option>
+                    <option value="./quiz.html">Quiz</option>
+                  </select>
+                </div>
+              </li>
             </ul>
+            <!-- end interview -->
           </div>
           <!-- end menu -->
 
@@ -99,7 +115,7 @@
             <!-- picture gallery start -->
 
             <div class="page-header">
-              <h1>Boston in Health</h1>
+              <h1></h1>
             </div>
             <!-- Gallery -->
             <div class="row">
@@ -184,27 +200,15 @@
                     <th>Substance Abuse disorders</th>
                     <td>lack of motivation</td>
                     <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>withdrawing from people</td>
                     <td></td>
                   </tr>
                   <tr>
-                    <th scope="row"></th>
-                    <td colspan="2">withdrawing from people</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td colspan="2">drug use</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td colspan="2">
-                      feelings that life is not worth living or suicidal
-                      thoughts
-                    </td>
-                    <td></td>
+                    <th></th>
+                    <td>drug use</td>
                     <td></td>
                   </tr>
                   <tr>
@@ -214,6 +218,13 @@
                       thoughts
                     </td>
                     <td></td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>
+                      feelings that life is not worth living or suicidal
+                      thoughts
+                    </td>
                     <td></td>
                   </tr>
                   <tr>
@@ -222,14 +233,12 @@
                       becoming obsessed with a topic, like death or religion
                     </td>
                     <td></td>
-                    <td></td>
                   </tr>
                   <tr>
                     <th></th>
                     <td>
                       becoming obsessed with a topic, like death or religion
                     </td>
-                    <td></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -239,15 +248,57 @@
                       responsibilities
                     </td>
                     <td></td>
-                    <td></td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
+          <footer
+            class="footer d-flex justify-content-between align-items-center p-5"
+            style="
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              background-color: #02155a;
+              height: 150px;
+              width: 100%;
+            "
+          >
+            <img
+              src="../images/Sharpes logo.png"
+              alt="pic of breadfruit tree"
+              style="width: 150px; height: 150px"
+            />
+
+            <ul class="footer-menu">
+              <li>
+                <a href="https://www.linkedin.com/in/deberoh-prentice/"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/accounts/login/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/kaidecoder?tab=repositories"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+            </ul>
+          </footer>
         </div>
       </div>
       <!-- close the container -->
     </div>
+    <script>
+      function interview(src) {
+        window.location = src;
+      }
+    </script>
   </body>
 </html>
