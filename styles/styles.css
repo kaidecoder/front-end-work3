@@ -71,6 +71,8 @@ input::placeholder {
   color: white;
 }
 
+/* index page animation starts*/
+
 .page-header {
   display: flex;
   justify-content: space-around;
@@ -80,7 +82,7 @@ input::placeholder {
   height: 40px;
 }
 
-/* animation starts*/
+
 .page-header:hover .empty {
   transform: translateX(3000px);
   animation: animate 6s linear infinite;
