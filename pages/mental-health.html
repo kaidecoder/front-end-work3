@@ -56,10 +56,20 @@
         justify-content: space-around;
         align-items: center;
       }
+      select {
+        font-size: 1.9rem;
+        padding: 1em 1.5em;
+        background-color: #1f9b00;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-2xl">
       <header class="header">
         <img
           class="img"
@@ -83,7 +93,7 @@
       </header>
 
       <div
-        class="landing-page1 d-flex justify-content-between flex-column h-50 w-auto fs-1 bg-danger"
+        class="landing-page1 d-flex justify-content-between flex-column h-50 w-auto fs-1"
       >
         <div class="row">
           <div class="menu w-25 fs-1 text-center">
@@ -96,9 +106,8 @@
                 <div class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
-                    <option value="./deb.html">Deb</option>
+                    <option value="./video.html">Video</option>
                     <option value="./about.html">About</option>
-                    <option value="./books.html">Books</option>
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
@@ -114,9 +123,9 @@
           >
             <!-- picture gallery start -->
 
-            <div class="page-header">
+            <!-- <div class="page-header">
               <h1></h1>
-            </div>
+            </div> -->
             <!-- Gallery -->
             <div class="row">
               <table class="table fs-3">
@@ -253,48 +262,48 @@
               </table>
             </div>
           </div>
-          <footer
-            class="footer d-flex justify-content-between align-items-center p-5"
-            style="
-              position: fixed;
-              bottom: 0;
-              left: 0;
-              background-color: #02155a;
-              height: 150px;
-              width: 100%;
-            "
-          >
-            <img
-              src="../images/Sharpes logo.png"
-              alt="pic of breadfruit tree"
-              style="width: 150px; height: 150px"
-            />
-
-            <ul class="footer-menu">
-              <li>
-                <a href="https://www.linkedin.com/in/deberoh-prentice/"
-                  ><i class="fa-brands fa-linkedin-in"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/accounts/login/"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </li>
-              <li>
-                <a href="https://github.com/kaidecoder?tab=repositories"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-              </li>
-            </ul>
-          </footer>
         </div>
       </div>
       <!-- close the container -->
     </div>
+    <footer
+      class="footer d-flex justify-content-between align-items-center p-5"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #02155a;
+        height: 150px;
+        width: 100%;
+      "
+    >
+      <img
+        src="../images/Sharpes logo.png"
+        alt="pic of breadfruit tree"
+        style="width: 150px; height: 150px"
+      />
+
+      <ul class="footer-menu">
+        <li>
+          <a href="https://www.linkedin.com/in/deberoh-prentice/"
+            ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/accounts/login/"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/kaidecoder?tab=repositories"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </li>
+      </ul>
+    </footer>
     <script>
       function interview(src) {
         window.location = src;

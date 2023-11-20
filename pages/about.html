@@ -64,6 +64,16 @@
         justify-content: space-around;
         align-items: center;
       }
+      select {
+        font-size: 1.9rem;
+        padding: 1em 1.5em;
+        background-color: #1f9b00;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
     </style>
   </head>
   <body>
@@ -92,7 +102,7 @@
 
       <!-- close the header -->
       <div
-        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
+        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1"
       >
         <div class="row">
           <div class="menu w-25 fs-1 text-center">
@@ -106,9 +116,8 @@
                 <div class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
-                    <option value="./deb.html">Deb</option>
+                    <option value="./video.html">Video</option>
                     <option value="./about.html">About</option>
-                    <option value="./books.html">Books</option>
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
@@ -129,8 +138,6 @@
               <div class="info">
                 <h1 class="name">I am<span class="filler title"></span>.</h1>
               </div>
-
-              <a href="deb.html">Go to interview home page</a>
             </div>
             <!-- end right side -->
           </div>

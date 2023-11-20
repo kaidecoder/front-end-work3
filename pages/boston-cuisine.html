@@ -41,39 +41,41 @@
         color: #ff5349;
         border: 3px solid #ff5349;
       }
-      .right-side {
-        background-color: #82bbff;
-      }
+
       .menu {
         background-color: #ff5349;
       }
       h1 {
         color: #0e083f;
       }
-      .footer{
-        display: flex;
-        width: 900px;
-        justify-content: space-around;
-        align-items: center;
-      }
+
       .footer-menu {
         display: flex;
         width: 900px;
         justify-content: space-around;
         align-items: center;
       }
-     
+      select {
+        font-size: 1.9rem;
+        padding: 1em 1.5em;
+        background-color: #1f9b00;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
     </style>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-2xl">
       <header class="header">
         <img
           class="img"
           src="../images/Sharpes logo.png"
           alt="logo of a breadfruit tree"
         />
-        <div class="d-flex align-items-center">
+        <div class="d-flex justify-content-between align-items-center">
           <form class="d-flex w-100" role="search">
             <input
               type="search"
@@ -89,12 +91,9 @@
         </div>
       </header>
 
-      <!-- <div
-        class="landing-page1 d-flex justify-content-between flex-column h-100 w-auto fs-1 bg-danger"
-      > -->
-
       <div
-        class="landing-page d-flex justify-content-around align-items-center flex-wrap gap-5 fs-3"
+        class="landing-page d-flex justify-content-center align-items-center flex-wrap gap-2 fs-3"
+        style="height: calc(100vh-450px)"
       >
         <div class="row">
           <div class="menu w-25 fs-1 text-center">
@@ -108,9 +107,8 @@
                 <div class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
-                    <option value="./deb.html">Deb</option>
+                    <option value="./video.html">Video</option>
                     <option value="./about.html">About</option>
-                    <option value="./books.html">Books</option>
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
@@ -123,7 +121,7 @@
 
           <!-- card cuisine start -->
           <div
-            class="right-side d-flex justify-content-around align-content-center flex-wrap w-75 fs-3 text-center gap-2"
+            class="right-side d-flex justify-content-around align-content-center flex-wrap w-75 fs-3 text-center gap-1 p-5"
           >
             <div class="card" style="width: 24rem">
               <img
@@ -296,55 +294,53 @@
             <!-- card cuisine end -->
 
             <!-- end landing page -->
-          <!-- </div> -->
-
+            <!-- </div> -->
           </div>
           <!-- end row -->
         </div>
         <!-- close container -->
       </div>
-      </div>
-        <footer
-          class="footer d-flex justify-content-between align-items-center p-5"
-          style="
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background-color: #02155a;
-            height: 150px;
-            width: 100%;
-          "
-        >
-          <img
-            src="../images/Sharpes logo.png"
-            alt="pic of breadfruit tree"
-            style="width: 150px; height: 150px"
-          />
+    </div>
+    <footer
+      class="footer d-flex justify-content-between align-items-center p-5"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #02155a;
+        height: 150px;
+        width: 100%;
+      "
+    >
+      <img
+        src="../images/Sharpes logo.png"
+        alt="pic of breadfruit tree"
+        style="width: 150px; height: 150px"
+      />
 
-          <ul class="footer-menu">
-            <li>
-              <a href="https://www.linkedin.com/in/deberoh-prentice/"
-                ><i class="fa-brands fa-linkedin-in fa-2xl"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/accounts/login/"
-                ><i class="fa-brands fa-instagram fa-2xl"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/kaidecoder?tab=repositories"
-                ><i class="fa-brands fa-github fa-2xl"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-            </li>
-          </ul>
-        </footer>
-        <!-- end container -->
-      
-    
+      <ul class="footer-menu">
+        <li>
+          <a href="https://www.linkedin.com/in/deberoh-prentice/"
+            ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/accounts/login/"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/kaidecoder?tab=repositories"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </li>
+      </ul>
+    </footer>
+    <!-- end container -->
+
     <script>
       function interview(src) {
         window.location = src;

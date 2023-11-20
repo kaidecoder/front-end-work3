@@ -5,7 +5,7 @@
 }
 
 .container-fluid {
-  background-color: #02155a;
+  height: 100vh;
 }
 .header {
   width: 100%;
@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #02155a;
 }
 
 a {
@@ -20,15 +21,9 @@ a {
   color: white;
 }
 
-.img {
+header .img {
   object-fit: contain;
-  height: 300px;
-}
-
-.menu-items {
-  display: flex;
-  height: 100px;
-  vertical-align: middle;
+  height: 250px;
 }
 
 .menu ul {
@@ -55,14 +50,15 @@ input::placeholder {
 }
 /* boston cuisine page */
 .card {
-  /* background-color: green; */
   color: black;
   padding: 10px;
-  height: 38rem;
+  height: 36rem;
+  margin-bottom: 20px;
+  border-radius: 20px;
 }
 
-.landing-page {
-  padding: 10px 0;
+.card-img-top {
+  border-radius: 20px 20px 0 0;
 }
 
 .cuisine-btn {
@@ -108,14 +104,6 @@ input::placeholder {
     transform: translateX(100%);
   }
 }
-.row {
-  display: inline-flex;
-  margin-top: -32px;
-  margin-left: -50px;
-}
-.row:nth-child(even) {
-  margin-left: 1px;
-}
 
 .empty {
   position: relative;
@@ -154,6 +142,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #82bbff;
 }
 
 .headshot-container {

@@ -1,97 +1,393 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games</title>
-    <link rel="stylesheet" href="../styles/script.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Games Bostonians Love</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8ec63f7015.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* games page*/
+      .game-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .game-source {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #180000;
+        font-size: 40px;
+        background: linear-gradient(#ffe53b, #ff2525);
+        box-shadow:
+          rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px,
+          rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px,
+          rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      .game-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      .game-pics {
+        display: grid;
+        height: 80vh;
+        margin: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .cell {
+        color: white;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow:
+          rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px,
+          rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px,
+          rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .cell a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 80px;
+      }
+
+      .cell1 {
+        background: deepskyblue;
+      }
+      .cell2 {
+        background: orangered;
+      }
+      .cell3 {
+        background: royalblue;
+      }
+      .cell4 {
+        background: gold;
+      }
+      .cell5 {
+        background: blueviolet;
+      }
+      .cell6 {
+        background: limegreen;
+      }
+      .cell7 {
+        background: coral;
+      }
+      .cell8 {
+        background: crimson;
+      }
+      .cell8 a,
+      .cell9 a {
+        font-size: 1em;
+        color: white;
+      }
+      .cell9 {
+        background: #0eb7a9;
+      }
+
+      .cell a img {
+        transition-duration: 1s;
+      }
+
+      img:hover {
+        transform: rotate(360deg);
+      }
+
+      @media screen and (min-width: 768px) {
+        .game-pics a {
+          text-align: center;
+        }
+      }
+      form {
+        position: relative;
+      }
+      .search-btn {
+        background-color: #ff5349;
+        color: white;
+        border-radius: 0 20px 20px 0;
+        font-weight: bold;
+        letter-spacing: 3px;
+        position: absolute;
+        left: -60px;
+      }
+      .search-btn:hover {
+        background-color: #fff;
+        color: #ff5349;
+        border: 3px solid #ff5349;
+      }
+      .right-side {
+        background-color: #82bbff;
+      }
+      .menu {
+        background-color: #ff5349;
+      }
+      h1 {
+        color: #0e083f;
+      }
+      .footer-menu {
+        display: flex;
+        width: 900px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      select {
+        font-size: 1.9rem;
+        padding: 1em 1.5em;
+        background-color: #1f9b00;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+    </style>
   </head>
   <body class="game-container">
-    <h1 class="title">HTML-CSS-JS Arcade Games</h1>
-    <a class="game-source" href="https://tommalbran.github.io/games/"
-      >https://tommalbran.github.io/games/</a
-    >
-    <a class="game-source" href="https://austinbeaufort.github.io/simon/"
-      >https://austinbeaufort.github.io/simon/</a
-    >
-    <a class="game-source" href="https://miker704.github.io/Centipede.js/"
-      >https://miker704.github.io/Centipede.js/</a
-    >
-    <a href="deb.html">Go to interview home page</a>
-    <div class="game-pics">
-      <div class="cell cell1">
-        <a href="https://tommalbran.github.io/games/#pacman"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.56.40 AM.png"
-            alt="pacman"
-          />Pacman</a
-        >
+    <div class="container-2xl">
+      <header class="header">
+        <img
+          class="img"
+          src="../images/Sharpes logo.png"
+          alt="logo of a breadfruit tree"
+        />
+        <div class="d-flex align-items-center">
+          <form class="d-flex w-100" role="search">
+            <input
+              type="search"
+              class="form-control p-4"
+              placeholder="Search..."
+              aria-label="Search"
+              style="width: 800px; padding: 20px"
+            />
+            <button class="search-btn px-5 py-3 fs-3 position-relative">
+              SEARCH
+            </button>
+          </form>
+        </div>
+      </header>
+
+      <!-- close the header -->
+      <div
+        class="landing-page d-flex justify-content-between flex-column w-auto fs-1"
+      >
+        <div class="row">
+          <div class="menu w-25 fs-1 text-center">
+            <ul class="d-flex flex-column m-5">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
+              <li><a href="./mental-health.html">Mental Health</a></li>
+
+              <!-- start interview -->
+              <li>
+                <div class="custom-select">
+                  <select onchange="interview(this.value)">
+                    <option selected disabled>Interview a Bostonian</option>
+                    <option value="./video.html">Video</option>
+                    <option value="./about.html">About</option>
+                    <option value="./games.html">Games</option>
+                    <option value="./quiz.html">Quiz</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+            <!-- end interview -->
+          </div>
+          <!-- end menu -->
+
+          <div
+            class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
+          >
+            <!-- picture gallery start -->
+
+            <!-- Gallery -->
+            <div class="row">
+              <a class="game-source" href="https://tommalbran.github.io/games/"
+                >https://tommalbran.github.io/games/</a
+              >
+              <a
+                class="game-source"
+                href="https://austinbeaufort.github.io/simon/"
+                >https://austinbeaufort.github.io/simon/</a
+              >
+              <a
+                class="game-source"
+                href="https://miker704.github.io/Centipede.js/"
+                >https://miker704.github.io/Centipede.js/</a
+              >
+
+              <div class="game-pics">
+                <div class="cell cell1">
+                  <a href="https://tommalbran.github.io/games/#pacman"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.56.40 AM.png"
+                      alt="pacman"
+                    />
+                    <span>Pacman</span></a
+                  >
+                </div>
+                <div class="cell cell2">
+                  <a href="https://tommalbran.github.io/games/#spider"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.57.37 AM.png"
+                      alt=""
+                    />Spider</a
+                  >
+                </div>
+                <div class="cell cell3">
+                  <a href="https://tommalbran.github.io/games/#puzzle"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.57.46 AM.png"
+                      alt="puzzle game"
+                    />Puzzle</a
+                  >
+                </div>
+                <div class="cell cell4">
+                  <a href="https://tommalbran.github.io/games/#defender"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.58.36 AM.png"
+                      alt="defender game"
+                    />Defender</a
+                  >
+                </div>
+                <div class="cell cell5">
+                  <a href="https://tommalbran.github.io/games/#tetris"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.59.18 AM.png"
+                      alt="tetris game"
+                    />Tetris</a
+                  >
+                </div>
+                <div class="cell cell6">
+                  <a href="https://tommalbran.github.io/games/#snake"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.59.31 AM.png"
+                      alt="snake game"
+                    />Snake</a
+                  >
+                </div>
+                <div class="cell cell7">
+                  <a href="https://tommalbran.github.io/games/#bounce"
+                    ><img
+                      class="game-img"
+                      src="../images/Screenshot 2023-09-14 at 9.59.58 AM.png"
+                      alt="breakout game"
+                    />Breakout</a
+                  >
+                </div>
+                <div class="cell cell8">
+                  <a
+                    class="game-source"
+                    href="https://austinbeaufort.github.io/simon/"
+                  >
+                    <img
+                      class="game-img"
+                      src="../images/Screenshot 2023-10-05 at 7.54.19 AM.png"
+                      alt="simon game"
+                    />Simon
+                  </a>
+                </div>
+                <div class="cell cell9">
+                  <a
+                    class="game-source"
+                    href="https://miker704.github.io/Centipede.js/"
+                  >
+                    <img
+                      class="game-img"
+                      src="../images/Screenshot 2023-10-05 at 8.05.22 AM.png"
+                      alt="centipede game"
+                    />Centipede
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+
+        <!-- Gallery -->
       </div>
-      <div class="cell cell2">
-        <a href="https://tommalbran.github.io/games/#spider"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.57.37 AM.png"
-            alt=""
-          />Spider</a
-        >
-      </div>
-      <div class="cell cell3">
-        <a href="https://tommalbran.github.io/games/#puzzle"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.57.46 AM.png"
-            alt="puzzle game"
-          />Puzzle</a
-        >
-      </div>
-      <div class="cell cell4">
-        <a href="https://tommalbran.github.io/games/#defender"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.58.36 AM.png"
-            alt="defender game"
-          />Defender</a
-        >
-      </div>
-      <div class="cell cell5">
-        <a href="https://tommalbran.github.io/games/#tetris"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.59.18 AM.png"
-            alt="tetris game"
-          />Tetris</a
-        >
-      </div>
-      <div class="cell cell6">
-        <a href="https://tommalbran.github.io/games/#snake"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.59.31 AM.png"
-            alt="snake game"
-          />Snake</a
-        >
-      </div>
-      <div class="cell cell7">
-        <a href="https://tommalbran.github.io/games/#bounce"
-          ><img
-            src="../images/Screenshot 2023-09-14 at 9.59.58 AM.png"
-            alt="breakout game"
-          />Breakout</a
-        >
-      </div>
-      <div class="cell cell8">
-        <a class="game-source" href="https://austinbeaufort.github.io/simon/">
-          <img
-            src="../images/Screenshot 2023-10-05 at 7.54.19 AM.png"
-            alt="simon game"
-          />Simon
-        </a>
-      </div>
-      <div class="cell cell9">
-        <a class="game-source" href="https://miker704.github.io/Centipede.js/">
-          <img
-            src="../images/Screenshot 2023-10-05 at 8.05.22 AM.png"
-            alt="centipede game"
-          />Centipede
-        </a>
-      </div>
+      <!-- end landing page -->
     </div>
+    <!-- end container -->
+    <footer
+      class="footer d-flex justify-content-between align-items-center p-5"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #02155a;
+        height: 150px;
+        width: 100%;
+      "
+    >
+      <img
+        src="../images/Sharpes logo.png"
+        alt="pic of breadfruit tree"
+        style="width: 150px; height: 150px"
+      />
+
+      <ul class="footer-menu">
+        <li>
+          <a href="https://www.linkedin.com/in/deberoh-prentice/"
+            ><i class="fa-brands fa-linkedin-in fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/accounts/login/"
+            ><i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/kaidecoder?tab=repositories"
+            ><i class="fa-brands fa-github fa-2xl"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script>
+      function interview(src) {
+        window.location = src;
+      }
+    </script>
   </body>
 </html>
