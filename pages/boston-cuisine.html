@@ -90,13 +90,14 @@
           </form>
         </div>
       </header>
-
-      <div
+      <!-- start landing page -->
+      <section
         class="landing-page d-flex justify-content-center align-items-center flex-wrap gap-2 fs-3"
         style="height: calc(100vh-450px)"
       >
         <div class="row">
-          <div class="menu w-25 fs-1 text-center">
+          <!-- start menu -->
+          <section class="menu w-25 fs-1 text-center">
             <ul class="d-flex flex-column m-5">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
@@ -104,7 +105,7 @@
 
               <li>
                 <!-- start interview -->
-                <div class="custom-select">
+                <section class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
                     <option value="./video.html">Video</option>
@@ -112,15 +113,15 @@
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
-                </div>
+                </section>
               </li>
             </ul>
             <!-- end interview -->
-          </div>
+          </section>
           <!-- end menu -->
 
           <!-- card cuisine start -->
-          <div
+          <section
             class="right-side d-flex justify-content-around align-content-center flex-wrap w-75 fs-3 text-center gap-1 p-5"
           >
             <div class="card" style="width: 24rem">
@@ -294,12 +295,12 @@
             <!-- card cuisine end -->
 
             <!-- end landing page -->
-            <!-- </div> -->
-          </div>
+           
+          </section>
           <!-- end row -->
         </div>
         <!-- close container -->
-      </div>
+      </section>
     </div>
     <footer
       class="footer d-flex justify-content-between align-items-center p-5"

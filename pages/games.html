@@ -197,11 +197,13 @@
       </header>
 
       <!-- close the header -->
-      <div
+      <!-- start landing page -->
+      <section
         class="landing-page d-flex justify-content-between flex-column w-auto fs-1"
       >
         <div class="row">
-          <div class="menu w-25 fs-1 text-center">
+          <!-- start menu -->
+          <section class="menu w-25 fs-1 text-center">
             <ul class="d-flex flex-column m-5">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
@@ -209,7 +211,7 @@
 
               <!-- start interview -->
               <li>
-                <div class="custom-select">
+                <section class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
                     <option value="./video.html">Video</option>
@@ -217,14 +219,13 @@
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
-                </div>
+                </section>
               </li>
             </ul>
             <!-- end interview -->
-          </div>
+          </section>
           <!-- end menu -->
-
-          <div
+          <section
             class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
           >
             <!-- picture gallery start -->
@@ -336,12 +337,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           <!-- end row -->
         </div>
 
-        <!-- Gallery -->
-      </div>
+        <!-- Gallery end-->
+      </section>
       <!-- end landing page -->
     </div>
     <!-- end container -->

@@ -95,19 +95,20 @@
           </form>
         </div>
       </header>
-
-      <div
+      <!-- start landing page -->
+      <section
         class="landing-page d-flex justify-content-between flex-column w-auto fs-1"
       >
         <div class="row">
-          <div class="menu w-25 fs-1 text-center" style="min-height: 90vh">
+          <!-- start menu -->
+          <section class="menu w-25 fs-1 text-center" style="min-height: 90vh">
             <ul class="d-flex flex-column m-5">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./boston-cuisine.html">Boston Cuisine</a></li>
               <li><a href="./mental-health.html">Mental Health</a></li>
               <li>
                 <!-- start interview -->
-                <div class="custom-select">
+                <section class="custom-select">
                   <select onchange="interview(this.value)">
                     <option selected disabled>Interview a Bostonian</option>
                     <option value="./video.html">Video</option>
@@ -115,17 +116,18 @@
                     <option value="./games.html">Games</option>
                     <option value="./quiz.html">Quiz</option>
                   </select>
-                </div>
+                </section>
               </li>
             </ul>
             <!-- end interview -->
-          </div>
+          </section>
           <!-- end menu -->
 
-          <div
+          <section
             class="right-side d-flex flex-column justify-content-around align-content-center w-75 fs-1 text-center gap-2"
           >
             <!-- picture gallery start -->
+            <!-- start animation -->
             <div class="row">
               <div class="page-header">
                 <div class="empty"></div>
@@ -133,9 +135,7 @@
                 <div class="empty"></div>
               </div>
             </div>
-            <!-- <div class="page-header">
-              <h1></h1>
-            </div> -->
+            <!-- end animation -->
             <!-- Gallery -->
             <div class="row" style="min-height: 90vh">
               <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -211,10 +211,11 @@
                 /></a>
               </div>
             </div>
-          </div>
+            <!-- end gallery -->
+          </section>
           <!-- close the container -->
         </div>
-      </div>
+      </section>
     </div>
     <footer
       class="footer d-flex justify-content-between align-items-center p-5"
